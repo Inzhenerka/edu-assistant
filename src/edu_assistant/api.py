@@ -9,9 +9,9 @@ app = FastAPI()
 
 @app.post('/ask')
 def ask(
-    role: RoleType = Form(),
-    template: TemplateType = Form(),
-    question: str = Form(examples=["Ты кто?"]),
+    role: RoleType = Form(description="Role of AI assistant"),
+    template: TemplateType = Form(description="Response format"),
+    question: str = Form(description="Student question", examples=["Ты кто?"]),
 ) -> str:
     """Ask question to educational assistant."""
     try:
