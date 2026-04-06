@@ -26,7 +26,7 @@ class RoleConfig(BaseModel):
 
 class Config(BaseModel):
     app: AppConfig
-    llm: LLMConfig
+    llms: dict[str, LLMConfig]
     roles: dict[RoleType, RoleConfig]
     system_templates: dict[TemplateType, str]
 
