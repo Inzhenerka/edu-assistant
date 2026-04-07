@@ -21,7 +21,6 @@ class LLMConfig(BaseModel):
 
 class RoleConfig(BaseModel):
     instruction: str
-    solve_formulas: bool = False
 
 
 class Config(BaseModel):
